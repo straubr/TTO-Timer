@@ -5,6 +5,7 @@
     <Vendor>TTO GmbH</Vendor>
     <URL>http://tto.de</URL>
     <Version>1.0.0</Version>
+    <ChangeLog Version="1.0.0" Date="2015-07-29 14:38:27 UTC">Initial Release</ChangeLog>
     <ChangeLog>Initial Release</ChangeLog>
     <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
     <Description Lang="en">Shows the time spent on AgentTicketZoom</Description>
