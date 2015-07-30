@@ -30,6 +30,8 @@
         <File Permission="644" Location="Custom/Kernel/Output/HTML/DefaultTimeUnitsFilter.pm"/>
         <File Permission="644" Location="var/httpd/htdocs/skins/Agent/tto-slim/css/Core.Timer.css"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/Core.Timer.js"/>
+        <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/jquery.min.js"/>
+        <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/moment.min.js"/>
         <File Permission="644" Location="Kernel/Config/Files/TTOTimer.xml"/>
     </Filelist>
 </otrs_package>
