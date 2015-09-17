@@ -27,7 +27,7 @@ sub Run {
     # Get needed Objects
     my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
-    my $ParamObject = $LayoutObject->{ParamObject};
+    my $ParamObject = $Kernel::OM->Get('Kernel::System::Web::Request');
 
     # Get dynamic value
     my $TimerTimeUnits = $ParamObject->GetParam ( Param => "TimerTimeUnits" );
