@@ -6,7 +6,7 @@
         <SubGroup>Frontend::Agent::ModuleRegistration</SubGroup>
             <Setting>
                 <Hash>
-                    <Item Key="Module">Kernel::Output::HTML::DefaultTimeUnitsFilter</Item>
+                    <Item Key="Module">Kernel::Output::HTML::TTO::DefaultTimeUnitsFilter</Item>
                     <Item Key="Templates">
                         <Hash>
                             <Item Key="AgentTicketPhone">1</Item>

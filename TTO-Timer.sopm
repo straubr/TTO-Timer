@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_package version="1.0">
     <Name>TTO-Timer</Name>
-    <Framework>4.0.x</Framework>
+    <Framework>5.x</Framework>
     <Vendor>TTO GmbH</Vendor>
     <URL>http://tto.de</URL>
     <Version>1.0.1</Version>
@@ -28,7 +28,7 @@
         - Übergabe des aktuellen Timer Wertes auf AgentTicketNote (per Klick auf den Timer)<br>
         ]]></IntroInstall>
     <Filelist>
-        <File Permission="644" Location="Custom/Kernel/Output/HTML/DefaultTimeUnitsFilter.pm"/>
+        <File Permission="644" Location="Custom/Kernel/Output/HTML/TTO/DefaultTimeUnitsFilter.pm"/>
         <File Permission="644" Location="var/httpd/htdocs/skins/Agent/tto-slim/css/Core.Timer.css"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/Core.Timer.js"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/jquery.min.js"/>

@@ -4,15 +4,12 @@
 # Kernel/Output/HTML/OutputFilterPreExample.pm - ...
 # --
 
-package Kernel::Output::HTML::DefaultTimeUnitsFilter;
+package Kernel::Output::HTML::TTO::DefaultTimeUnitsFilter;
 
 use strict;
 use warnings;
 
-our @ObjectDependencies = (
-    'Kernel::Config',
-    'Kernel::Output::HTML::Layout',
-);
+our $ObjectManagerDisabled = 1;
 
 sub new {
     my ( $Type, %Param ) = @_;
