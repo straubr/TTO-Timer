@@ -4,7 +4,8 @@
     <Framework>5.x</Framework>
     <Vendor>TTO GmbH</Vendor>
     <URL>http://tto.de</URL>
-    <Version>5.0.0</Version>
+    <Version>5.0.1</Version>
+    <ChangeLog Version="5.0.1" Date="2015-09-17 14:49:05 UTC">Bugfix</ChangeLog>
     <ChangeLog Version="5.0.0" Date="2015-09-17 14:34:22 UTC">Migrated to 5.x</ChangeLog>
     <ChangeLog Version="1.0.1" Date="2015-07-30 06:49:57 UTC">Fixed js lib beeing pulled from remote server</ChangeLog>
     <ChangeLog Version="1.0.0" Date="2015-07-29 14:38:27 UTC">Initial Release</ChangeLog>
