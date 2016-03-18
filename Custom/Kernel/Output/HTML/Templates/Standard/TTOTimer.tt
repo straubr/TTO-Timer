@@ -1,0 +1,20 @@
+            <link href="/otrs-web/skins/Agent/tto-slim/css/Core.Timer.css" rel="stylesheet" />
+            <div class="WidgetSimple">
+                <div class="Header">
+                    <div class="WidgetAction Toggle">
+                        <a href="#" title="[% Translate("Show or hide the content") | html %]"><i class="fa fa-caret-right"></i><i class="fa fa-caret-down"></i></a>
+                    </div>
+                    <h2>[% Translate("Time spent zoomed on ticket") | html %]</h2>
+                </div>
+                <div class="Content">
+                    <div id="clock" class="light">
+                        <div class="display">
+                            <div class="digits"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="/otrs-web/js/thirdparty/TTO/moment.min.js"></script>
+            <script src="/otrs-web/js/thirdparty/TTO/jquery.min.js"></script>
+            <script src="/otrs-web/js/thirdparty/TTO/Core.Timer.js"></script>
+

@@ -4,7 +4,8 @@
     <Framework>5.x</Framework>
     <Vendor>TTO GmbH</Vendor>
     <URL>http://tto.de</URL>
-    <Version>5.0.1</Version>
+    <Version>5.0.2</Version>
+    <ChangeLog Version="5.0.2" Date="2016-03-18 14:08:51 UTC+1">Migrated to custom repo</ChangeLog>
     <ChangeLog Version="5.0.1" Date="2015-09-17 14:49:05 UTC">Bugfix</ChangeLog>
     <ChangeLog Version="5.0.0" Date="2015-09-17 14:34:22 UTC">Migrated to 5.x</ChangeLog>
     <ChangeLog Version="1.0.1" Date="2015-07-30 06:49:57 UTC">Fixed js lib beeing pulled from remote server</ChangeLog>
@@ -30,11 +31,14 @@
         - Übergabe des aktuellen Timer Wertes auf AgentTicketNote (per Klick auf den Timer)<br>
         ]]></IntroInstall>
     <Filelist>
+        <File Permission="644" Location="Custom/Kernel/Output/HTML/Templates/Standard/TTOTimer.tt"/>
         <File Permission="644" Location="Custom/Kernel/Output/HTML/TTO/DefaultTimeUnitsFilter.pm"/>
+        <File Permission="644" Location="Custom/Kernel/Output/HTML/FilterElementPost/TTOTimerHook.pm"/>
         <File Permission="644" Location="var/httpd/htdocs/skins/Agent/tto-slim/css/Core.Timer.css"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/Core.Timer.js"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/jquery.min.js"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/moment.min.js"/>
         <File Permission="644" Location="Kernel/Config/Files/TTOTimer.xml"/>
+        <File Permission="644" Location="Kernel/Language/de_TTO_Timer.pm"/>
     </Filelist>
 </otrs_package>

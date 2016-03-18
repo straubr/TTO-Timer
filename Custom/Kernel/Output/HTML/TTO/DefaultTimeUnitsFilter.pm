@@ -1,9 +1,3 @@
-# --
-# Kernel/Output/HTML/DefaultTimeUnitsFilter.pm
-# Based on this znuny template:
-# Kernel/Output/HTML/OutputFilterPreExample.pm - ...
-# --
-
 package Kernel::Output::HTML::TTO::DefaultTimeUnitsFilter;
 
 use strict;

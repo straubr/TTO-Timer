@@ -8,6 +8,7 @@ $(function(){
 	}
 
 	// On click send the current time as param to the note screen
+/*
 	$('#clock').on('click', function () {
 	    var note_link = $('a[href*="AgentTicketNote"]').attr("href");
 	    var timertimeunits = round(total_time);
@@ -15,7 +16,7 @@ $(function(){
 	    Core.UI.Popup.OpenPopup (note_link, 'Action');
             return false;
 	});
-
+*/
 	var total_time = 0;
 
 	// Map digits to their names (this will be an array)
