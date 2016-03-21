@@ -4,7 +4,8 @@
     <Framework>5.x</Framework>
     <Vendor>TTO GmbH</Vendor>
     <URL>http://tto.de</URL>
-    <Version>5.0.2</Version>
+    <Version>5.0.3</Version>
+    <ChangeLog Version="5.0.3" Date="2016-03-18 15:43:37 UTC+1">Used template hooks instead of hardcoded customization</ChangeLog>
     <ChangeLog Version="5.0.2" Date="2016-03-18 14:08:51 UTC+1">Migrated to custom repo</ChangeLog>
     <ChangeLog Version="5.0.1" Date="2015-09-17 14:49:05 UTC">Bugfix</ChangeLog>
     <ChangeLog Version="5.0.0" Date="2015-09-17 14:34:22 UTC">Migrated to 5.x</ChangeLog>

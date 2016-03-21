@@ -7,16 +7,36 @@ $(function(){
 	    return Math.ceil(number/60);
 	}
 
+    var TimerBaseLink = '';
 	// On click send the current time as param to the note screen
-/*
 	$('#clock').on('click', function () {
-	    var note_link = $('a[href*="AgentTicketNote"]').attr("href");
+        // Add TicketID and timer units to link
+        // first get baselink
+        if (TimerBaseLink == '') {
+            TimerBaseLink = $('#TimerLink').attr('href');
+        }
+        
+        // Get the ID of the current ticket
+        var baseURL = location.href.split('index.pl?');
+        var params = baseURL[1].split(';');
+        var TicketID = '';
+        for (index = 0; index < params.length; ++index) {
+            var curParam = params[index].split('=');
+            if (curParam[0] == "TicketID"){
+                TicketID = curParam[1];
+            }
+        }
+
+        // Then create the link of the div
 	    var timertimeunits = round(total_time);
-	    note_link += ";TimerTimeUnits=" + timertimeunits;
-	    Core.UI.Popup.OpenPopup (note_link, 'Action');
-            return false;
+        var NewLink = TimerBaseLink + "AgentTicketNote;TicketID=" + TicketID;
+        NewLink += ";TimerTimeUnits=" + timertimeunits;
+
+        // And change it before the request is sent
+        $('#TimerLink').attr('href', NewLink);
+    
 	});
-*/
+
 	var total_time = 0;
 
 	// Map digits to their names (this will be an array)

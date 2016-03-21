@@ -7,14 +7,15 @@
                     <h2>[% Translate("Time spent zoomed on ticket") | html %]</h2>
                 </div>
                 <div class="Content">
+                <a href="/otrs/index.pl?Action=AgentTicketNote;" id="TimerLink" class="AsPopup PopupType_TicketAction">
                     <div id="clock" class="light">
                         <div class="display">
                             <div class="digits"></div>
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
             <script src="/otrs-web/js/thirdparty/TTO/moment.min.js"></script>
             <script src="/otrs-web/js/thirdparty/TTO/jquery.min.js"></script>
             <script src="/otrs-web/js/thirdparty/TTO/Core.Timer.js"></script>
-
