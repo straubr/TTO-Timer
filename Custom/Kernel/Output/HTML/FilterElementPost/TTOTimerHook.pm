@@ -20,8 +20,12 @@ sub new {
 sub Run {
     my ( $Self, %Param ) = @_;
 
-    # return if not in AgentTicketZoom (should not happen)
-    return if $Param{TemplateFile} !~ /^(AgentTicketZoom)/;
+    my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+    my $Config = $ConfigObject->Get( 'Frontend::Output::FilterElementPost' );
+    my $Templates = $Config->{TTOTimerHook}->{Templates};
+
+    # return if not in configured view - should never happen
+    return unless $Templates->{ $Param{TemplateFile} };
 
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
 
