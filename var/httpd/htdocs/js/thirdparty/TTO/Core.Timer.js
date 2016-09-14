@@ -1,30 +1,30 @@
-$(function(){
+$(function() {
     // Cache some selectors
     var clock = $('#clock');
 
     // returns (ceil-)rounded minutes
-    function round (number) {
-        return Math.ceil(number/60);
+    function round(number) {
+        return Math.ceil(number / 60);
     }
 
     var StartTime = new Date();
     var TimerBaseLink = '';
 
     // On click send the current time as param to the note screen
-    $('#clock').on('click', function () {
+    $('#clock').on('click', function() {
         // Add TicketID and timer units to link
         // first get baselink
         if (TimerBaseLink == '') {
             TimerBaseLink = $('#TimerLink').attr('href');
         }
-        
+
         // Get the ID of the current ticket
         var baseURL = location.href.split('index.pl?');
         var params = baseURL[1].split(';');
         var TicketID = '';
         for (index = 0; index < params.length; ++index) {
             var curParam = params[index].split('=');
-            if (curParam[0] == "TicketID"){
+            if (curParam[0] == "TicketID") {
                 TicketID = curParam[1];
             }
         }
@@ -33,12 +33,12 @@ $(function(){
         var now = new Date();
         var total_time = round(Math.floor( (now.getTime() - StartTime.getTime() ) /1000 ));
 
-        var NewLink = TimerBaseLink + "AgentTicketNote;TicketID=" + TicketID;
+        var NewLink = TimerBaseLink + ";AgentTicketNote;TicketID=" + TicketID;
         NewLink += ";TimerTimeUnits=" + total_time;
 
         // And change it before the request is sent
         $('#TimerLink').attr('href', NewLink);
-    
+
     });
 
     var total_time = 0;
@@ -59,16 +59,15 @@ $(function(){
 
     var digit_holder = clock.find('.digits');
 
-    $.each(positions, function(){
+    $.each(positions, function() {
 
-        if(this == ':'){
+        if (this == ':') {
             digit_holder.append('<div class="dots">');
-        }
-        else{
+        } else {
 
             var pos = $('<div>');
 
-            for(var i=1; i<8; i++){
+            for (var i = 1; i < 8; i++) {
                 pos.append('<span class="d' + i + '">');
             }
 
@@ -81,20 +80,26 @@ $(function(){
 
     });
 
-    function return_time (seconds) {
+    function return_time(seconds) {
         // returns an array in format:
         // HHMMSS
-        var hours = Math.floor(seconds/3600);
+        var hours = Math.floor(seconds / 3600);
         var minutes = Math.floor((seconds - (hours * 3600)) / 60);
         var seconds = seconds - (hours * 3600) - (minutes * 60);
-        if (hours < 10) {hours = "0" + hours;}
-        if (minutes < 10) {minutes = "0" + minutes;}
-        if (seconds < 10) {seconds = "0" + seconds;}
+        if (hours < 10) {
+            hours = "0" + hours;
+        }
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
         return (hours + minutes + seconds).split("");
     }
 
     // Run a timer every second and update the clock
-    (function update_time(){
+    (function update_time() {
 
         var now = new Date();
         var secondsDiff = Math.floor((now.getTime() - StartTime.getTime()) / 1000);

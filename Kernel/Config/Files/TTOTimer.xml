@@ -2,7 +2,7 @@
 <otrs_config version="1.0" init="Config">
     <ConfigItem Name="Frontend::Output::FilterElementPost###DefaultTimeUnitsFilter" Required="0" Valid="1">
         <Description Translatable="1">This configuration registers an OutputFilter module that inserts a default time unit into the accounted time field.</Description>
-        <Group>TTO Framework</Group>
+        <Group>TTO-Timer</Group>
         <SubGroup>Frontend::Agent::ModuleRegistration</SubGroup>
             <Setting>
                 <Hash>
@@ -20,17 +20,17 @@
                 </Hash>
             </Setting>
     </ConfigItem>
-    <ConfigItem Name="TTO::OutputFilter::Config::DefaultTimeUnitsValue" Required="0" Valid="1">
+    <ConfigItem Name="TTO::OutputFilter::Config::DefaultTimeUnitsValue" Required="0" Valid="0">
         <Description Translatable="1">Defines the default value that should be inserted.</Description>
-        <Group>TTO Config</Group>
+        <Group>TTO-Timer</Group>
         <SubGroup>Config::TimeAccounting</SubGroup>
             <Setting>
-                <String>10</String>
+                <String></String>
             </Setting>
     </ConfigItem>
     <ConfigItem Name="Frontend::Template::GenerateBlockHooks###100-TTO-Timer" Required="1" Valid="1">
         <Description Translatable="1">Generate HTML comment hooks for the specified blocks so that filters can use them.</Description>
-        <Group>TTO Framework</Group>
+        <Group>TTO-Timer</Group>
         <SubGroup>Hooks</SubGroup>
         <Setting>
             <Hash>
@@ -43,8 +43,8 @@
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Frontend::Output::FilterElementPost###TTOTimerHook" Required="0" Valid="1">
-        <Description Translatable="1">Inject HTML and Java Script to show a timer in AgentTicketZoom.</Description>
-        <Group>TTO Framework</Group>
+        <Description Translatable="1">Inject HTML and JavaScript to show a timer in AgentTicketZoom.</Description>
+        <Group>TTO-Timer</Group>
         <SubGroup>Frontend::Agent::ModuleRegistration</SubGroup>
         <Setting>
             <Hash>

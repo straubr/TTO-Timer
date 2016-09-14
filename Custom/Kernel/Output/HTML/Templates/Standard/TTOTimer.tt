@@ -1,4 +1,4 @@
-            <link href="/otrs-web/skins/Agent/tto-slim/css/Core.Timer.css" rel="stylesheet" />
+            <link href="[% Config("Frontend::WebPath") %]skins/Agent/tto-slim/css/Core.Timer.css" rel="stylesheet" />
             <div class="WidgetSimple">
                 <div class="Header">
                     <div class="WidgetAction Toggle">
@@ -7,7 +7,7 @@
                     <h2>[% Translate("Time spent zoomed on ticket") | html %]</h2>
                 </div>
                 <div class="Content">
-                <a href="/otrs/index.pl?Action=AgentTicketNote;" id="TimerLink" class="AsPopup PopupType_TicketAction">
+                <a href="[% Env("Baselink") %]Action=AgentTicketNote;" id="TimerLink" class="AsPopup PopupType_TicketAction">
                     <div id="clock" class="light">
                         <div class="display">
                             <div class="digits"></div>
@@ -16,6 +16,6 @@
                 </div>
                 </a>
             </div>
-            <script src="/otrs-web/js/thirdparty/TTO/moment.min.js"></script>
-            <script src="/otrs-web/js/thirdparty/TTO/jquery.min.js"></script>
-            <script src="/otrs-web/js/thirdparty/TTO/Core.Timer.js"></script>
+            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/momentjs-2.10.6/moment.min.js"></script>
+            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/jquery-2.1.4/jquery.js"></script>
+            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/TTO/Core.Timer.js"></script>

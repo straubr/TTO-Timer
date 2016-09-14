@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<otrs_package version="1.0">
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.1">
     <Name>TTO-Timer</Name>
     <Framework>5.x</Framework>
     <Vendor>TTO GmbH</Vendor>
     <URL>http://tto.de</URL>
-    <Version>5.0.5</Version>
+    <Version>5.0.6</Version>
+    <ChangeLog Version="5.0.6" Date="2016-08-08 08:41:31 UTC+1">fixed check of current template</ChangeLog>
     <ChangeLog Version="5.0.5" Date="2016-07-06 16:00:33 UTC+1">Fixed chrome bug: background tab sleeps javascript execution</ChangeLog>
     <ChangeLog Version="5.0.4" Date="2016-03-21 13:17:24 UTC+1">Bugfixes and usage of hook instead of hardcoded template-modifications</ChangeLog>
     <ChangeLog Version="5.0.3" Date="2016-03-18 15:43:37 UTC+1">Used template hooks instead of hardcoded customization</ChangeLog>
@@ -17,31 +18,42 @@
     <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
     <Description Lang="en">Shows the time spent on AgentTicketZoom</Description>
     <Description Lang="de">Zeigt die Zeit an, die auf ein TicketZoom verbracht wird.</Description>
-    <IntroInstall Type="pre" Title="Install Information" Lang="en"><![CDATA[
-        <br/>
-        <strong> Welcome! </strong><br/>
+    <Description Lang="hu">Megjeleníti az ügyintézői jegynagyításon eltöltött időt.</Description>
+    <IntroInstall Lang="en" Title="Install Information" Type="pre"><![CDATA[
+        <br>
+        <strong> Welcome! </strong><br>
         Contains:<br>
         - A timer on AgentTicketZoom<br>
         - A module to prefill the timeunits field if it is present<br>
         - Clicking on the timer opens a note with the current time prefilled<br>
-        ]]></IntroInstall>
-    <IntroInstall Type="pre" Title="Install Information" Lang="de"><![CDATA[
-        <br/>
-        <strong> Willkommen! </strong><br/>
+        <br>
+    ]]></IntroInstall>
+    <IntroInstall Lang="de" Title="Install Information" Type="pre"><![CDATA[
+        <br>
+        <strong> Willkommen! </strong><br>
         Enthält:
         - Einen Timer im AgentTicketZoom<br>
         - Ein Modul um die TimeUnits Felder mit einem konfigurierbaren Zeitwert vorzubefüllen<br>
         - Übergabe des aktuellen Timer Wertes auf AgentTicketNote (per Klick auf den Timer)<br>
-        ]]></IntroInstall>
+        <br>
+    ]]></IntroInstall>
+    <IntroInstall Lang="hu" Title="Telepítési információk" Type="pre"><![CDATA[
+        <br>
+        <strong>Üdvözöljük!</strong><br>
+        Ez a csomag a következőket tartalmazza:<br>
+        - Egy időmérőt az ügyintézői jegynagyításon<br>
+        - Egy modult az időegységek mező előre kitöltéséhez, ha az jelen van<br>
+        - Az időmérőre kattintva megnyit egy jegyzetet, előre kitöltve az aktuális idővel<br>
+        <br>
+    ]]></IntroInstall>
     <Filelist>
         <File Permission="644" Location="Custom/Kernel/Output/HTML/Templates/Standard/TTOTimer.tt"/>
         <File Permission="644" Location="Custom/Kernel/Output/HTML/TTO/DefaultTimeUnitsFilter.pm"/>
         <File Permission="644" Location="Custom/Kernel/Output/HTML/FilterElementPost/TTOTimerHook.pm"/>
         <File Permission="644" Location="var/httpd/htdocs/skins/Agent/tto-slim/css/Core.Timer.css"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/Core.Timer.js"/>
-        <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/jquery.min.js"/>
-        <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/moment.min.js"/>
         <File Permission="644" Location="Kernel/Config/Files/TTOTimer.xml"/>
         <File Permission="644" Location="Kernel/Language/de_TTO_Timer.pm"/>
+        <File Permission="644" Location="Kernel/Language/hu_TTO_Timer.pm"/>
     </Filelist>
 </otrs_package>
