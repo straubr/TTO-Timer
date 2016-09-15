@@ -4,7 +4,8 @@
     <Framework>5.x</Framework>
     <Vendor>TTO GmbH</Vendor>
     <URL>http://tto.de</URL>
-    <Version>5.0.6</Version>
+    <Version>5.0.7</Version>
+    <ChangeLog Version="5.0.7" Date="2016-09-14 16:56:23 UTC+1">Added Hungarian translation and improved formatting, thanks to Balázs Úr</ChangeLog>
     <ChangeLog Version="5.0.6" Date="2016-08-08 08:41:31 UTC+1">fixed check of current template</ChangeLog>
     <ChangeLog Version="5.0.5" Date="2016-07-06 16:00:33 UTC+1">Fixed chrome bug: background tab sleeps javascript execution</ChangeLog>
     <ChangeLog Version="5.0.4" Date="2016-03-21 13:17:24 UTC+1">Bugfixes and usage of hook instead of hardcoded template-modifications</ChangeLog>
