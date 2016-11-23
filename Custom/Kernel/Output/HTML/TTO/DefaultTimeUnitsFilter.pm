@@ -24,10 +24,10 @@ sub Run {
     my $ParamObject = $Kernel::OM->Get('Kernel::System::Web::Request');
 
     # Get dynamic value
-    my $TimerTimeUnits = $ParamObject->GetParam ( Param => "TimerTimeUnits" );
+    my $TimerTimeUnits = $ParamObject->GetParam( Param => "TimerTimeUnits" );
 
     # Get value from timer param or config
-    my $Default_TimeUnits = $TimerTimeUnits || $ConfigObject->Get ('TTO::OutputFilter::Config::DefaultTimeUnitsValue');
+    my $Default_TimeUnits = $TimerTimeUnits || $ConfigObject->Get('TTO::OutputFilter::Config::DefaultTimeUnitsValue') || '15';
 
     # manipulate HTML content
     $LayoutObject->AddJSOnDocumentComplete ( Code => <<"EOF");
