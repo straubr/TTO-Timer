@@ -16,6 +16,6 @@
                 </div>
                 </a>
             </div>
-            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/momentjs-2.10.6/moment.min.js"></script>
-            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/jquery-2.1.4/jquery.js"></script>
+            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/momentjs-2.18.1/moment.min.js"></script>
+            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/jquery-3.2.1/jquery.js"></script>
             <script src="[% Config("Frontend::WebPath") %]js/thirdparty/TTO/Core.Timer.js"></script>

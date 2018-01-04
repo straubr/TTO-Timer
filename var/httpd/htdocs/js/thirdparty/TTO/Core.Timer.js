@@ -33,7 +33,7 @@ $(function() {
         var now = new Date();
         var total_time = round(Math.floor( (now.getTime() - StartTime.getTime() ) /1000 ));
 
-        var NewLink = TimerBaseLink + ";AgentTicketNote;TicketID=" + TicketID;
+        var NewLink = TimerBaseLink + "TicketID=" + TicketID;
         NewLink += ";TimerTimeUnits=" + total_time;
 
         // And change it before the request is sent

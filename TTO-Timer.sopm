@@ -4,7 +4,8 @@
     <Framework>5.x</Framework>
     <Vendor>TTO GmbH</Vendor>
     <URL>http://tto.de</URL>
-    <Version>5.0.7</Version>
+    <Version>5.0.8</Version>
+    <ChangeLog Version="5.0.8" Date="2016-11-23 10:41:37 UTC+1">Added default fallback time of 15 (minutes) to the timer</ChangeLog>
     <ChangeLog Version="5.0.7" Date="2016-09-14 16:56:23 UTC+1">Added Hungarian translation and improved formatting, thanks to Balázs Úr</ChangeLog>
     <ChangeLog Version="5.0.6" Date="2016-08-08 08:41:31 UTC+1">fixed check of current template</ChangeLog>
     <ChangeLog Version="5.0.5" Date="2016-07-06 16:00:33 UTC+1">Fixed chrome bug: background tab sleeps javascript execution</ChangeLog>
@@ -16,6 +17,7 @@
     <ChangeLog Version="1.0.1" Date="2015-07-30 06:49:57 UTC">Fixed js lib beeing pulled from remote server</ChangeLog>
     <ChangeLog Version="1.0.0" Date="2015-07-29 14:38:27 UTC">Initial Release</ChangeLog>
     <ChangeLog>Initial Release</ChangeLog>
+    <Framework>6.x</Framework>
     <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
     <Description Lang="en">Shows the time spent on AgentTicketZoom</Description>
     <Description Lang="de">Zeigt die Zeit an, die auf ein TicketZoom verbracht wird.</Description>
@@ -48,12 +50,12 @@
         <br>
     ]]></IntroInstall>
     <Filelist>
-        <File Permission="644" Location="Custom/Kernel/Output/HTML/Templates/Standard/TTOTimer.tt"/>
         <File Permission="644" Location="Custom/Kernel/Output/HTML/TTO/DefaultTimeUnitsFilter.pm"/>
-        <File Permission="644" Location="Custom/Kernel/Output/HTML/FilterElementPost/TTOTimerHook.pm"/>
+        <File Permission="644" Location="Custom/Kernel/Output/HTML/TicketZoom/TTOTimer.pm"/>
+        <File Permission="644" Location="Custom/Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TTOTimer.tt"/>
         <File Permission="644" Location="var/httpd/htdocs/skins/Agent/tto-slim/css/Core.Timer.css"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/TTO/Core.Timer.js"/>
-        <File Permission="644" Location="Kernel/Config/Files/TTOTimer.xml"/>
+        <File Permission="644" Location="Kernel/Config/Files/XML/TTOTimer.xml"/>
         <File Permission="644" Location="Kernel/Language/de_TTO_Timer.pm"/>
         <File Permission="644" Location="Kernel/Language/hu_TTO_Timer.pm"/>
     </Filelist>
